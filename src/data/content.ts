@@ -77,6 +77,11 @@ export const content = {
     "Asalu enduku intha bujji ga vuntavuu epudu choosina gatiga pateskovali anipistadii",
     "Mana idaram hug chesukunapudu, mudhu pedthunapudu haaaahhh entha chesina takkuve anipistadi hehee.",
   ],
+  memories: {
+    title: "Best memories with you",
+    instruction: "tap the jar to pull one out",
+    completed: "These are just a few of our memories—there are so many more, and I can’t wait to make them with you. 💗",
+  },
 
   // 🌙 Finale lines
   finaleLines: ["Do you know how lucky i am..", "because i got you, hehee..."],

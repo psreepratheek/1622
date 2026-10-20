@@ -11,7 +11,7 @@ const NOTE_COLORS = [
   "var(--blush)",
 ];
 
-/** Extra — a jar of folded notes; each tap pulls out one reason I love her. */
+/** Extra — a jar of folded notes, each one a shared memory. */
 export function ReasonsJar({ onNext }: { onNext: () => void }) {
   const reasons = content.reasons;
   const [pulled, setPulled] = useState(0);
@@ -30,10 +30,10 @@ export function ReasonsJar({ onNext }: { onNext: () => void }) {
     <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 text-center md:flex-row md:items-center md:justify-center md:gap-16 md:text-left">
       <div className="flex flex-col items-center">
         <h2 className="font-display text-fluid-title font-semibold text-berry">
-          Reasons I love you
+          {content.memories.title}
         </h2>
         <p className="mt-2 text-fluid-lead text-muted-foreground">
-          {all ? "That's the whole jar… for now." : "tap the jar to pull one out"}
+          {all ? content.memories.completed : content.memories.instruction}
         </p>
         <motion.button
           type="button"

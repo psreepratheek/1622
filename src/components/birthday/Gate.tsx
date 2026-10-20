@@ -127,7 +127,7 @@ export function Gate({ onUnlock }: { onUnlock: () => void }) {
                   setValue(e.target.value);
                   setError(false);
                 }}
-                placeholder="••-••-••••"
+                placeholder="••••••••"
                 disabled={phase === "unlocked"}
                 className="mt-4 h-12 w-full rounded-2xl border border-glass-border bg-cream/80 px-4 text-center text-lg font-semibold tracking-[0.15em] text-berry outline-none transition-shadow placeholder:text-berry/30 focus:shadow-glow"
               />

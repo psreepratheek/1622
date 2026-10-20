@@ -13,4 +13,3 @@
 - All personal copy, photo paths, password and flags live in `src/data/content.ts`; components only read from it (so the owner can edit content without touching code).
 - The story is a single route (`/`) driven by a step state machine in `src/components/birthday/BirthdayApp.tsx`; each screen is its own component in that folder (one screen visible at a time, with AnimatePresence transitions).
 - Anything random or window-dependent (particles, counters, media queries) renders only after mount to avoid SSR hydration mismatches.
-- Background music must only start from a user gesture; falls back to the Web Audio music box when `/public/music.mp3` is absent.

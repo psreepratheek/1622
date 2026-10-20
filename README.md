@@ -10,9 +10,6 @@ Put your photos in `public/photos/`:
 
 Keep faces in frame with `objectPosition` in `content.ts` (e.g. `"50% 30%"`). Switch the photo screen between `"polaroid"` and `"strip"` with `photoStyle`.
 
-## Music
-Drop a soft song at `public/music.mp3`. Until you do, a gentle music-box "Happy Birthday" plays instead. Music starts when she unlocks the gift.
-
 ## Sharing it
 Click **Publish** in Lovable to get a link you can send her.
 

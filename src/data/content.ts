@@ -1,7 +1,7 @@
 /**
  * ✏️  EDIT EVERYTHING HERE — this is the only file you need to touch.
  *
- * Photos live in /public/photos/ and music in /public/music.mp3.
+ * Photos live in /public/photos/.
  * Replace the sample photos with your own (keep the same file names),
  * or change the paths below.
  */
@@ -24,9 +24,6 @@ export const content = {
 
   // 📅 The day you met — powers the "time together" counter (YYYY-MM-DD)
   metDate: "2023-02-14",
-
-  // 🎵 Background song. If the file is missing, a soft music-box melody plays instead.
-  musicSrc: "/music.mp3",
 
   // 📸 Photos. objectPosition keeps faces in frame ("50% 30%" = centre, upper third)
   photos: {

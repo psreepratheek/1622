@@ -1,7 +1,5 @@
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { content } from "@/data/content";
-import { useMusic } from "@/hooks/use-birthday";
 import { BirthdaySurprise } from "./BirthdaySurprise";
 import { ClickBursts } from "./ClickBursts";
 import { CursorHeart } from "./CursorHeart";
@@ -11,7 +9,6 @@ import { Gate } from "./Gate";
 import { HowWeMet } from "./HowWeMet";
 import { LoveLetter } from "./LoveLetter";
 import { LoveQuestion } from "./LoveQuestion";
-import { MusicToggle } from "./MusicToggle";
 import { PhotoMoment } from "./PhotoMoment";
 import { ReasonsJar } from "./ReasonsJar";
 
@@ -21,7 +18,6 @@ type Step = (typeof STEPS)[number];
 /** The whole story — one screen at a time. */
 export function BirthdayApp() {
   const [step, setStep] = useState<Step>("gate");
-  const music = useMusic(content.musicSrc);
   const isFinale = step === "finale";
 
   const go = (s: Step) => setStep(s);
@@ -29,8 +25,6 @@ export function BirthdayApp() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    if (music.started) music.setLevel(isFinale ? 0.85 : 0.5);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
   function screen() {
@@ -39,7 +33,6 @@ export function BirthdayApp() {
         return (
           <Gate
             onUnlock={() => {
-              music.start();
               next();
             }}
           />
@@ -93,7 +86,6 @@ export function BirthdayApp() {
           </AnimatePresence>
         </main>
 
-        <MusicToggle visible={music.started} muted={music.muted} onToggle={music.toggle} night={isFinale} />
       </div>
     </MotionConfig>
   );
